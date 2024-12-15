@@ -2,16 +2,16 @@ import random
 import requests
 from termcolor import colored
 
-domains = ["yahoo.com", "xlcool.com", "yopmail.com", "hotmail.com", "outlook.com", "live.com", "gmail.com"]
-passwords = ["ahaaha", "kurda", "samisami", "1122334455", "1234512345", "112233", "102030", "miniclip", "104867", "10593", "123456789", "12345678", "121212"]
+domains = ["diegowkr7@gmail.com"]
+passwords = ["ogunhe13"]
 
 def generate_email():
-    username = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=8))
-    domain = random.choice(domains)
+    username = ''
+    domain = (domains)
     return f"{username}@{domain}"
 
 def generate_password():
-    return random.choice(passwords)
+    return (passwords)
 
 def check_account(email, password):
     url = "https://me.miniclip.com"
