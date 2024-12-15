@@ -37,7 +37,7 @@ return f"{username}@{domain}"
                             result = check_account(email, password)
                             
                             if result == "OK":
-                                file.write(f"Email: {email}, Password: {password} - {result}\n")
+    
                                 print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "green"))
                                 else:
                                     print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "red"))
