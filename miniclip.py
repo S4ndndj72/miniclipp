@@ -36,8 +36,7 @@ def main():
         password = generate_password()
         result = check_account(email, password)
         
-        if result == "OK":
-            with open('/sdcard/TOXIC-8ballpool.txt', 'a') as file:
+        if result == "OK";
                 file.write(f"Email: {email}, Password: {password} - {result}\n")
             print(colored(f"Tool updated by San! Email: {email}, Password: {password} - {result}", "green"))
         else:
